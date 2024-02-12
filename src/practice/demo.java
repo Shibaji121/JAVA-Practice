@@ -20,12 +20,12 @@ public class demo extends demo1 {
         return "ABC";
     }
     protected void finalize(){
-
+        System.out.println("finalize called");
     }
     public static void main(String[] args) {
         new demo(1).method();
         new demo(2).method(2);
         new demo(3).method("ABC");
-
+        System.gc();
     }
 }
